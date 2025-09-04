@@ -28,6 +28,11 @@ public class InitBlocks {
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
+    public static final RegistryObject<Block> USUAL_STAIRS = registerBlock("usual_stairs",
+            () -> new StairBlock(USUAL_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
     public static final RegistryObject<Block> USUAL_LOG = registerBlock("usual_log",
             () -> new StrippedWoodLogs(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));

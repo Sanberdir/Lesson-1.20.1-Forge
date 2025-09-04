@@ -33,6 +33,7 @@ public class ModFlammableBlocks {
             setFlammableMethod.invoke(fireBlock, InitBlocks.STRIPPED_USUAL_LOG.get(), 5, 5);
             setFlammableMethod.invoke(fireBlock, InitBlocks.STRIPPED_USUAL_WOOD.get(), 5, 5);
             setFlammableMethod.invoke(fireBlock, InitBlocks.USUAL_PLANKS.get(), 5, 20);
+            setFlammableMethod.invoke(fireBlock, InitBlocks.USUAL_STAIRS.get(), 5, 20);
         } catch (Exception e) {
             // Если происходит ошибка (например, метод не найден), она будет выведена в консоль
             e.printStackTrace();

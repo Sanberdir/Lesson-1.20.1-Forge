@@ -23,19 +23,20 @@ public class CreativeLessonTab extends CreativeModeTab {
     public static final RegistryObject<CreativeModeTab> LESSON_TAB = CREATIVE_MODE_TABS.register("lesson_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(InitItems.TIGER_STONE.get()))
                     .title(Component.translatable("creative_tab.lesson_1_20_1_forge"))
-                    .displayItems((pParameters, pOutput) -> {
+                    .displayItems((parameters, output) -> {
                         //Blocks
-                        pOutput.accept(InitBlocks.DICE_BLOCK.get());
-                        pOutput.accept(InitBlocks.USUAL_PLANKS.get());
-                        pOutput.accept(InitBlocks.USUAL_LOG.get());
-                        pOutput.accept(InitBlocks.USUAL_WOOD.get());
-                        pOutput.accept(InitBlocks.STRIPPED_USUAL_LOG.get());
-                        pOutput.accept(InitBlocks.STRIPPED_USUAL_WOOD.get());
+                        output.accept(InitBlocks.DICE_BLOCK.get());
+                        output.accept(InitBlocks.USUAL_PLANKS.get());
+                        output.accept(InitBlocks.USUAL_LOG.get());
+                        output.accept(InitBlocks.USUAL_WOOD.get());
+                        output.accept(InitBlocks.STRIPPED_USUAL_LOG.get());
+                        output.accept(InitBlocks.STRIPPED_USUAL_WOOD.get());
+                        output.accept(InitBlocks.USUAL_STAIRS.get());
                         //Items
-                        pOutput.accept(InitItems.USUAL_SAPLING.get());
-                        pOutput.accept(InitItems.USUAL_LEAVES.get());
-                        pOutput.accept(InitItems.TIGER_STONE.get());
-                        pOutput.accept(InitItems.CALCINE.get());
+                        output.accept(InitItems.USUAL_SAPLING.get());
+                        output.accept(InitItems.USUAL_LEAVES.get());
+                        output.accept(InitItems.TIGER_STONE.get());
+                        output.accept(InitItems.CALCINE.get());
 
                     })
                     .build());

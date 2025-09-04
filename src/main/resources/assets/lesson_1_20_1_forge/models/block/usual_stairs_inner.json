@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "lesson_1_20_1_forge:block/usual_planks",
+    "side": "lesson_1_20_1_forge:block/usual_planks",
+    "top": "lesson_1_20_1_forge:block/usual_planks"
+  }
+}
