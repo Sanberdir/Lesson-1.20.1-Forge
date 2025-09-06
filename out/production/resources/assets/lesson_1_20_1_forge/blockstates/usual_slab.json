@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lesson_1_20_1_forge:block/usual_slab"
+    },
+    "type=double": {
+      "model": "lesson_1_20_1_forge:block/usual_planks"
+    },
+    "type=top": {
+      "model": "lesson_1_20_1_forge:block/usual_slab_top"
+    }
+  }
+}
