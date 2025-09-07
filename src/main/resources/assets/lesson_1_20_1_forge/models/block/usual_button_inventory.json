@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "lesson_1_20_1_forge:block/usual_planks"
+  }
+}

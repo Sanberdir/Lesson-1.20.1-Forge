@@ -4,8 +4,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -37,6 +39,15 @@ public class InitBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final RegistryObject<Block> USUAL_PRESSURE_PLATE = registerBlock("usual_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.of().mapColor(USUAL_PLANKS.get().defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                            .noCollission().strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.SPRUCE));
+
+    public static final RegistryObject<Block> USUAL_BUTTON = registerBlock("usual_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY),
+                    BlockSetType.OAK, 10, true));
 
     public static final RegistryObject<Block> USUAL_LOG = registerBlock("usual_log",
             () -> new StrippedWoodLogs(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS)

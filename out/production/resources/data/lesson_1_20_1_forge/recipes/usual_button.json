@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "lesson_1_20_1_forge:usual_planks"
+    }
+  ],
+  "result": {
+    "item": "lesson_1_20_1_forge:usual_button"
+  }
+}

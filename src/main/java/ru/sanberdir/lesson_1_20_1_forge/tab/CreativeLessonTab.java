@@ -33,6 +33,8 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitBlocks.STRIPPED_USUAL_WOOD.get());
                         output.accept(InitBlocks.USUAL_STAIRS.get());
                         output.accept(InitBlocks.USUAL_SLAB.get());
+                        output.accept(InitBlocks.USUAL_PRESSURE_PLATE.get());
+                        output.accept(InitBlocks.USUAL_BUTTON.get());
                         //Items
                         output.accept(InitItems.USUAL_SAPLING.get());
                         output.accept(InitItems.USUAL_LEAVES.get());
