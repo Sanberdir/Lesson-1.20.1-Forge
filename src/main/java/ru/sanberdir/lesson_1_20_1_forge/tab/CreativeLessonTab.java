@@ -40,6 +40,8 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitItems.USUAL_LEAVES.get());
                         output.accept(InitItems.TIGER_STONE.get());
                         output.accept(InitItems.CALCINE.get());
+                        output.accept(InitItems.USUAL_CHEST_BOAT.get());
+                        output.accept(InitItems.USUAL_BOAT.get());
 
                     })
                     .build());

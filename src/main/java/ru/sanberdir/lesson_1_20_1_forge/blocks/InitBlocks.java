@@ -43,7 +43,7 @@ public class InitBlocks {
     public static final RegistryObject<Block> USUAL_PRESSURE_PLATE = registerBlock("usual_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     BlockBehaviour.Properties.of().mapColor(USUAL_PLANKS.get().defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS)
-                            .noCollission().strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.SPRUCE));
+                            .noCollission().strength(0.5F).ignitedByLava().pushReaction(PushReaction.DESTROY), BlockSetType.OAK));
 
     public static final RegistryObject<Block> USUAL_BUTTON = registerBlock("usual_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY),

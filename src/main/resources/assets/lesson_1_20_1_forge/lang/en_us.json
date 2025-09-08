@@ -8,13 +8,16 @@
   "block.lesson_1_20_1_forge.usual_sapling": "Usual Sapling",
   "block.lesson_1_20_1_forge.usual_button": "Usual Button",
   "block.lesson_1_20_1_forge.usual_pressure_plate": "Usual Pressure Plate",
-
   "block.lesson_1_20_1_forge.usual_wood": "Usual Wood",
   "block.lesson_1_20_1_forge.stripped_usual_log": "Stripped Usual Log",
   "block.lesson_1_20_1_forge.stripped_usual_wood": "Stripped Usual Wood",
+
   "creative_tab.lesson_1_20_1_forge": "Lesson 1.20.1",
+
   "item.lesson_1_20_1_forge.tiger_stone": "Tiger Stone",
   "item.lesson_1_20_1_forge.calcine": "Calcine",
   "item.lesson_1_20_1_forge.usual_leaves": "Usual Leaves",
+  "item.lesson_1_20_1_forge.usual_boat": "Usual Boat",
+  "item.lesson_1_20_1_forge.usual_chest_boat": "Usual Chest Boat",
   "item.lesson_1_20_1_forge.usual_sapling": "Usual Sapling"
 }
