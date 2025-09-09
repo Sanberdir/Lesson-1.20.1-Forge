@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "key": {
+    "#": {
+      "item": "lesson_1_20_1_forge:usual_planks"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "result": {
+    "item": "lesson_1_20_1_forge:usual_boat"
+  }
+}

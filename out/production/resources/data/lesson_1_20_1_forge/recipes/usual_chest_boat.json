@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "chest_boat",
+  "ingredients": [
+    {
+      "item": "minecraft:chest"
+    },
+    {
+      "item": "lesson_1_20_1_forge:usual_boat"
+    }
+  ],
+  "result": {
+    "item": "lesson_1_20_1_forge:usual_chest_boat"
+  }
+}
