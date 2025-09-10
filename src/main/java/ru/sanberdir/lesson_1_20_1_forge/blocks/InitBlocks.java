@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +40,16 @@ public class InitBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final RegistryObject<Block> USUAL_FENCE = registerBlock("usual_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final RegistryObject<Block> USUAL_FENCE_GATE = registerBlock("usual_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of()
+                    .mapColor(USUAL_PLANKS.get().defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).ignitedByLava(), WoodType.OAK));
 
     public static final RegistryObject<Block> USUAL_PRESSURE_PLATE = registerBlock("usual_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,

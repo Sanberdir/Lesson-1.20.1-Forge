@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "lesson_1_20_1_forge:block/usual_planks"
+  }
+}

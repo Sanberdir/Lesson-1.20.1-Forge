@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall_open",
+  "textures": {
+    "texture": "lesson_1_20_1_forge:block/usual_planks"
+  }
+}
