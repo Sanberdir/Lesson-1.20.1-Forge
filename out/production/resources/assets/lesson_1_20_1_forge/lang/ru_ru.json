@@ -12,11 +12,18 @@
   "block.lesson_1_20_1_forge.usual_button": "Обыкновенная кнопка",
   "block.lesson_1_20_1_forge.usual_pressure_plate": "Обыкновенная нажимная плита",
 
+  "block.lesson_1_20_1_forge.usual_wall_hanging_sign": "Настенная подвесная табличка из обычного дерева",
+  "block.lesson_1_20_1_forge.usual_wall_sign": "Настенная табличка из обычного дерева",
+  "block.lesson_1_20_1_forge.usual_hanging_sign": "Подвесная табличка из обычного дерева",
+  "block.lesson_1_20_1_forge.usual_sign": "Табличка из обычного дерева",
+
   "creative_tab.lesson_1_20_1_forge": "Урок 1.20.1",
 
   "item.lesson_1_20_1_forge.tiger_stone": "Тигровый камень",
   "item.lesson_1_20_1_forge.calcine": "Огарок",
   "item.lesson_1_20_1_forge.usual_boat": "Обычная Лодка",
+  "item.lesson_1_20_1_forge.usual_sign": "Табличка из обычного дерева",
+  "item.lesson_1_20_1_forge.usual_hanging_sign": "Подвесная табличка из обычного дерева",
   "item.lesson_1_20_1_forge.usual_chest_boat": "Обычная лодка с сундуком",
   "item.lesson_1_20_1_forge.usual_leaves": "Обычная листва",
   "item.lesson_1_20_1_forge.usual_sapling": "Обычный саженец"

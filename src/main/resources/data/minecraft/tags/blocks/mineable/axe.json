@@ -10,6 +10,11 @@
     "lesson_1_20_1_forge:usual_button",
     "lesson_1_20_1_forge:usual_pressure_plate",
     "lesson_1_20_1_forge:stripped_usual_log",
-    "lesson_1_20_1_forge:stripped_usual_wood"
+    "lesson_1_20_1_forge:stripped_usual_wood",
+
+    "lesson_1_20_1_forge:usual_hanging_sign",
+    "lesson_1_20_1_forge:usual_sign",
+    "lesson_1_20_1_forge:usual_wall_hanging_sign",
+    "lesson_1_20_1_forge:usual_wall_sign"
   ]
 }

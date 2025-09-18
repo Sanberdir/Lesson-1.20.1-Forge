@@ -2,6 +2,9 @@ package ru.sanberdir.lesson_1_20_1_forge;
 
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,11 +22,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.catch_fire.ModFlammableBlocks;
+import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModUsualBoatRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModModelLayersItem;
 import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
+import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LessonForge1201.MODID)
@@ -40,6 +45,7 @@ public class LessonForge1201 {
         modEventBus.addListener(this::commonSetup);
         ModEntitiesItem.ENTITIES.register(modEventBus);
         // Регистрация класса блоков
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         InitBlocks.BLOCKS.register(modEventBus);
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
@@ -73,6 +79,7 @@ public class LessonForge1201 {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
+
         @SubscribeEvent
         public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(ModModelLayersItem.USUAL_BOAT_LAYER, BoatModel::createBodyModel);
@@ -81,12 +88,14 @@ public class LessonForge1201 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            Sheets.addWoodType(ModWoodTypes.USUAL);
             EntityRenderers.register(ModEntitiesItem.MOD_BOAT_USUAL.get(), pContext -> new ModUsualBoatRenderer(pContext, false));
             EntityRenderers.register(ModEntitiesItem.MOD_CHEST_BOAT_USUAL.get(), pContext -> new ModUsualBoatRenderer(pContext, true));
             event.enqueueWork(() -> {
                 ComposterBlock.COMPOSTABLES.put(InitItems.USUAL_LEAVES.get(), 0.3f);
                 ComposterBlock.COMPOSTABLES.put(InitItems.USUAL_SAPLING.get(), 0.2f);
             });
+
         }
     }
 }

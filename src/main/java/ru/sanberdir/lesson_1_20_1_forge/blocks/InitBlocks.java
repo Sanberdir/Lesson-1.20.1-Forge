@@ -13,9 +13,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
-import ru.sanberdir.lesson_1_20_1_forge.blocks.custom.StrippedWoodLogs;
+import ru.sanberdir.lesson_1_20_1_forge.blocks.custom.*;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
 import ru.sanberdir.lesson_1_20_1_forge.world.tree.UsualTree;
+import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 
 import java.util.function.Supplier;
 
@@ -50,6 +51,20 @@ public class InitBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.of()
                     .mapColor(USUAL_PLANKS.get().defaultMapColor()).forceSolidOn().instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).ignitedByLava(), WoodType.OAK));
+
+
+    public static final RegistryObject<Block> USUAL_SIGN = BLOCKS.register("usual_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.USUAL));
+
+    public static final RegistryObject<Block> USUAL_WALL_SIGN = BLOCKS.register("usual_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.USUAL));
+
+    public static final RegistryObject<Block> USUAL_HANGING_SIGN = BLOCKS.register("usual_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.USUAL));
+
+    public static final RegistryObject<Block> USUAL_WALL_HANGING_SIGN = BLOCKS.register("usual_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.USUAL));
+
 
     public static final RegistryObject<Block> USUAL_PRESSURE_PLATE = registerBlock("usual_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,

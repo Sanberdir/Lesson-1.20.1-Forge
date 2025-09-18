@@ -44,6 +44,8 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitItems.CALCINE.get());
                         output.accept(InitItems.USUAL_CHEST_BOAT.get());
                         output.accept(InitItems.USUAL_BOAT.get());
+                        output.accept(InitItems.USUAL_SIGN.get());
+                        output.accept(InitItems.USUAL_HANGING_SIGN.get());
 
                     })
                     .build());
