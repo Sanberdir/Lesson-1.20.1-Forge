@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features": "lesson_1_20_1_forge:end_emerald_ore_placed",
+  "step": "underground_ores"
+}
