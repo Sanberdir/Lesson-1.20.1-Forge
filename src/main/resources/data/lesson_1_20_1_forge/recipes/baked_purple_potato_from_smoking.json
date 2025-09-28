@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "lesson_1_20_1_forge:purple_potato"
+  },
+  "result": "lesson_1_20_1_forge:backed_purple_potato"
+}

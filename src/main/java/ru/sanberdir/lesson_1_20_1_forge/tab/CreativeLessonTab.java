@@ -4,7 +4,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
@@ -38,6 +37,9 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitBlocks.USUAL_PRESSURE_PLATE.get());
                         output.accept(InitBlocks.USUAL_BUTTON.get());
                         //Items
+                        output.accept(InitItems.POISONOUS_PURPLE_POTATO.get());
+                        output.accept(InitItems.BACKED_PURPLE_POTATO.get());
+                        output.accept(InitItems.PURPLE_POTATO.get());
                         output.accept(InitItems.USUAL_SAPLING.get());
                         output.accept(InitItems.USUAL_LEAVES.get());
                         output.accept(InitItems.TIGER_STONE.get());

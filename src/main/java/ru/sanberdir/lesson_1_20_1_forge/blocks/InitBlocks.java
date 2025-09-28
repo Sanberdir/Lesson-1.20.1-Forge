@@ -75,6 +75,9 @@ public class InitBlocks {
             () -> new ButtonBlock(BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY),
                     BlockSetType.OAK, 10, true));
 
+    public static final RegistryObject<Block> PURPLE_POTATO = BLOCKS.register("purple_potato",
+            () -> new PurplePotato(BlockBehaviour.Properties.copy(Blocks.POTATOES)));
+
     public static final RegistryObject<Block> USUAL_LOG = registerBlock("usual_log",
             () -> new StrippedWoodLogs(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));

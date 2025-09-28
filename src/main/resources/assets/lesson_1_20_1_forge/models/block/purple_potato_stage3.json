@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "lesson_1_20_1_forge:block/purple_potato_stage3"
+  },"render_type": "cutout"
+}

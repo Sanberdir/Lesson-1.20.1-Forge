@@ -94,6 +94,8 @@ public class LessonForge1201 {
             event.enqueueWork(() -> {
                 ComposterBlock.COMPOSTABLES.put(InitItems.USUAL_LEAVES.get(), 0.3f);
                 ComposterBlock.COMPOSTABLES.put(InitItems.USUAL_SAPLING.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(InitItems.PURPLE_POTATO.get(), 0.2f);
+                ComposterBlock.COMPOSTABLES.put(InitItems.POISONOUS_PURPLE_POTATO.get(), 0.2f);
             });
 
         }

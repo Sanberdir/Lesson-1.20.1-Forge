@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage0"
+    },
+    "age=1": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage0"
+    },
+    "age=2": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage1"
+    },
+    "age=3": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage1"
+    },
+    "age=4": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage2"
+    },
+    "age=5": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage2"
+    },
+    "age=6": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage2"
+    },
+    "age=7": {
+      "model": "lesson_1_20_1_forge:block/purple_potato_stage3"
+    }
+  }
+}

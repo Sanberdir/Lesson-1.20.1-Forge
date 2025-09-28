@@ -28,6 +28,21 @@ public class InitItems {
     public static final RegistryObject<Item> USUAL_LEAVES = ITEMS.register("usual_leaves",
             () -> new ItemNameBlockItem(InitBlocks.USUAL_LEAVES.get(), new Item.Properties()));
 
+
+    public static final RegistryObject<Item> PURPLE_POTATO = ITEMS.register("purple_potato",
+            () -> new ItemNameBlockItem(InitBlocks.PURPLE_POTATO.get(), new Item.Properties()
+                    .food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).build())));
+
+    public static final RegistryObject<Item> BACKED_PURPLE_POTATO = ITEMS.register("backed_purple_potato",
+            () -> new Item(new Item.Properties()
+                    .food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.8F).fast().build())));
+
+    public static final RegistryObject<Item> POISONOUS_PURPLE_POTATO = ITEMS.register("poisonous_purple_potato",
+            () -> new Item(new Item.Properties()
+                    .food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F)
+                            .effect(new MobEffectInstance(MobEffects.POISON, 100,0),1F).build())));
+
+
     public static final RegistryObject<Item> USUAL_BOAT = ITEMS.register("usual_boat",
             () -> new ModBoatItem(false, ModBoatEntityUsual.Type.USUAL, new Item.Properties()));
 

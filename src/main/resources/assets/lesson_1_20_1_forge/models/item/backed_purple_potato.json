@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "lesson_1_20_1_forge:item/backed_purple_potato"
+  }
+}
