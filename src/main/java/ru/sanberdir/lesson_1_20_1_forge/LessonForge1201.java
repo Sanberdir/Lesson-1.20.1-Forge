@@ -28,6 +28,7 @@ import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModUsualBoatRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModModelLayersItem;
 import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
+import ru.sanberdir.lesson_1_20_1_forge.villagers.InitVillagers;
 import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -46,11 +47,13 @@ public class LessonForge1201 {
         ModEntitiesItem.ENTITIES.register(modEventBus);
         // Регистрация класса блоков
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+
         InitBlocks.BLOCKS.register(modEventBus);
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
         // Регистрация класса креатив табов
         CreativeLessonTab.CREATIVE_MODE_TABS.register(modEventBus);
+        InitVillagers.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
