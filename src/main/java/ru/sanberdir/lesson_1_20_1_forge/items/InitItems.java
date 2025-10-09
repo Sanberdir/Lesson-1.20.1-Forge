@@ -3,10 +3,7 @@ package ru.sanberdir.lesson_1_20_1_forge.items;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.HangingSignItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.SignItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,6 +18,9 @@ public class InitItems {
 
     public static final RegistryObject<Item> TIGER_STONE = ITEMS.register("tiger_stone",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MOD_BOW = ITEMS.register("mod_bow",
+            () -> new BowItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> USUAL_SAPLING = ITEMS.register("usual_sapling",
             () -> new FuelItemBlock(InitBlocks.USUAL_SAPLING.get(), new Item.Properties(), 450));

@@ -24,6 +24,7 @@ import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.catch_fire.ModFlammableBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
+import ru.sanberdir.lesson_1_20_1_forge.items.ModItemProperties;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModUsualBoatRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModModelLayersItem;
@@ -91,6 +92,7 @@ public class LessonForge1201 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            ModItemProperties.addCustomItemProperties();
             Sheets.addWoodType(ModWoodTypes.USUAL);
             EntityRenderers.register(ModEntitiesItem.MOD_BOAT_USUAL.get(), pContext -> new ModUsualBoatRenderer(pContext, false));
             EntityRenderers.register(ModEntitiesItem.MOD_CHEST_BOAT_USUAL.get(), pContext -> new ModUsualBoatRenderer(pContext, true));

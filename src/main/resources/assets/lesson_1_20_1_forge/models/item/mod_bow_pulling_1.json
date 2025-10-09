@@ -1,0 +1,6 @@
+{
+    "parent": "lesson_1_20_1_forge:item/mod_bow",
+    "textures": {
+        "layer0": "lesson_1_20_1_forge:item/mod_bow_pulling_1"
+    }
+}
