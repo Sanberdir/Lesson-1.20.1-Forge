@@ -20,7 +20,9 @@ public class InitItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> MOD_BOW = ITEMS.register("mod_bow",
-            () -> new BowItem(new Item.Properties().stacksTo(1)));
+            () -> new BowItem(new Item.Properties().stacksTo(1).durability(5000)));
+    public static final RegistryObject<Item> MOD_CROSSBOW = ITEMS.register("mod_crossbow",
+            () -> new CrossbowItem(new Item.Properties().stacksTo(1).durability(5000)));
 
     public static final RegistryObject<Item> USUAL_SAPLING = ITEMS.register("usual_sapling",
             () -> new FuelItemBlock(InitBlocks.USUAL_SAPLING.get(), new Item.Properties(), 450));

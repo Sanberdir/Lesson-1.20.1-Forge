@@ -13,6 +13,9 @@ public class ModItemProperties {
     public static void addCustomItemProperties() {
         // Добавляем свойства для лука из мода
         makeBow(InitItems.MOD_BOW.get());
+
+        // Добавляем свойства для арбалета из мода
+        makeCrossbow(InitItems.MOD_CROSSBOW.get());
     }
 
     /**
@@ -43,5 +46,98 @@ public class ModItemProperties {
                     // В противном случае возвращаем 0.0
                     return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F;
                 });
+    }
+
+    /**
+     * Метод для настройки свойств отрисовки арбалета
+     * @param item - предмет арбалета, для которого настраиваются свойства
+     */
+    private static void makeCrossbow(Item item) {
+        // Регистрируем свойство "pull" - определяет степень натяжения арбалета (от 0.0 до 1.0)
+        ItemProperties.register(item, new ResourceLocation("pull"),
+                (itemStack, clientLevel, livingEntity, seed) -> {
+                    if (livingEntity == null) {
+                        return 0.0F;
+                    } else {
+                        // Проверяем, что entity использует именно этот арбалет
+                        if (livingEntity.getUseItem() != itemStack) {
+                            return 0.0F;
+                        }
+
+                        // Вычисляем прогресс натяжения арбалета
+                        int useTicks = itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks();
+                        float progress = (float) useTicks / (float) getChargeDuration(itemStack);
+                        return progress > 1.0F ? 1.0F : progress;
+                    }
+                });
+
+        // Регистрируем свойство "pulling" - определяет, натягивается ли арбалет в данный момент (0 или 1)
+        ItemProperties.register(item, new ResourceLocation("pulling"),
+                (itemStack, clientLevel, livingEntity, seed) -> {
+                    return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F;
+                });
+
+        // Регистрируем свойство "charged" - определяет, заряжен ли арбалет (0 или 1)
+        ItemProperties.register(item, new ResourceLocation("charged"),
+                (itemStack, clientLevel, livingEntity, seed) -> {
+                    return livingEntity != null && isCharged(itemStack) ? 1.0F : 0.0F;
+                });
+
+        // Регистрируем свойство "firework" - определяет, заряжен ли арбалет фейерверком (0 или 1)
+        ItemProperties.register(item, new ResourceLocation("firework"),
+                (itemStack, clientLevel, livingEntity, seed) -> {
+                    return livingEntity != null && isCharged(itemStack) && containsFireworkRocket(itemStack) ? 1.0F : 0.0F;
+                });
+    }
+
+    /**
+     * Вспомогательный метод для определения времени зарядки арбалета
+     * @param itemStack - предмет арбалета
+     * @return время зарядки в тиках
+     */
+    private static int getChargeDuration(net.minecraft.world.item.ItemStack itemStack) {
+        // Базовая длительность зарядки арбалета (в тиках)
+        // Можно добавить логику для быстрой зарядки с определенными зачарованиями
+        int baseChargeTime = 25; // 1.25 секунды (25 тиков)
+
+        // Если есть зачарование "Быстрая зарядка", уменьшаем время
+        int quickChargeLevel = net.minecraft.world.item.enchantment.EnchantmentHelper.getItemEnchantmentLevel(
+                net.minecraft.world.item.enchantment.Enchantments.QUICK_CHARGE, itemStack);
+
+        if (quickChargeLevel > 0) {
+            baseChargeTime -= 5 * quickChargeLevel; // Уменьшаем на 5 тиков за уровень
+        }
+
+        return Math.max(baseChargeTime, 5); // Минимальное время зарядки - 5 тиков
+    }
+
+
+    /**
+     * Вспомогательный метод для проверки, заряжен ли арбалет
+     * @param itemStack - предмет арбалета
+     * @return true если арбалет заряжен
+     */
+    private static boolean isCharged(net.minecraft.world.item.ItemStack itemStack) {
+        // Проверяем стандартный для Minecraft NBT-тег Charged
+        return itemStack.getTag() != null && itemStack.getTag().getBoolean("Charged");
+    }
+
+    /**
+     * Вспомогательный метод для проверки, содержит ли арбалет фейерверк
+     * @param itemStack - предмет арбалета
+     * @return true если арбалет заряжен фейерверком
+     */
+    private static boolean containsFireworkRocket(net.minecraft.world.item.ItemStack itemStack) {
+        // Проверяем, есть ли в NBT арбалета фейерверк
+        if (itemStack.getTag() != null && itemStack.getTag().contains("ChargedProjectiles")) {
+            net.minecraft.nbt.ListTag projectiles = itemStack.getTag().getList("ChargedProjectiles", 10); // 10 - тип TAG_Compound
+            if (!projectiles.isEmpty()) {
+                // Берем первый снаряд и проверяем, является ли он фейерверком
+                net.minecraft.nbt.CompoundTag projectile = projectiles.getCompound(0);
+                // Проверяем ID предмета. "minecraft:firework_rocket" - это стандартный ID фейерверка.
+                return projectile.contains("id") && projectile.getString("id").equals("minecraft:firework_rocket");
+            }
+        }
+        return false;
     }
 }

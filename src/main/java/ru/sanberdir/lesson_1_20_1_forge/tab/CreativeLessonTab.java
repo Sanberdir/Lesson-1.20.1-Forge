@@ -38,6 +38,7 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitBlocks.USUAL_BUTTON.get());
                         //Items
                         output.accept(InitItems.MOD_BOW.get());
+                        output.accept(InitItems.MOD_CROSSBOW.get());
                         output.accept(InitItems.POISONOUS_PURPLE_POTATO.get());
                         output.accept(InitItems.BACKED_PURPLE_POTATO.get());
                         output.accept(InitItems.PURPLE_POTATO.get());
