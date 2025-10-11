@@ -1,8 +1,13 @@
 package ru.sanberdir.lesson_1_20_1_forge.items;
 
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 public class ModItemProperties {
 
@@ -95,14 +100,14 @@ public class ModItemProperties {
      * @param itemStack - предмет арбалета
      * @return время зарядки в тиках
      */
-    private static int getChargeDuration(net.minecraft.world.item.ItemStack itemStack) {
+    private static int getChargeDuration(ItemStack itemStack) {
         // Базовая длительность зарядки арбалета (в тиках)
         // Можно добавить логику для быстрой зарядки с определенными зачарованиями
         int baseChargeTime = 25; // 1.25 секунды (25 тиков)
 
         // Если есть зачарование "Быстрая зарядка", уменьшаем время
-        int quickChargeLevel = net.minecraft.world.item.enchantment.EnchantmentHelper.getItemEnchantmentLevel(
-                net.minecraft.world.item.enchantment.Enchantments.QUICK_CHARGE, itemStack);
+        int quickChargeLevel = EnchantmentHelper.getItemEnchantmentLevel(
+                Enchantments.QUICK_CHARGE, itemStack);
 
         if (quickChargeLevel > 0) {
             baseChargeTime -= 5 * quickChargeLevel; // Уменьшаем на 5 тиков за уровень
@@ -117,7 +122,7 @@ public class ModItemProperties {
      * @param itemStack - предмет арбалета
      * @return true если арбалет заряжен
      */
-    private static boolean isCharged(net.minecraft.world.item.ItemStack itemStack) {
+    private static boolean isCharged(ItemStack itemStack) {
         // Проверяем стандартный для Minecraft NBT-тег Charged
         return itemStack.getTag() != null && itemStack.getTag().getBoolean("Charged");
     }
@@ -127,13 +132,13 @@ public class ModItemProperties {
      * @param itemStack - предмет арбалета
      * @return true если арбалет заряжен фейерверком
      */
-    private static boolean containsFireworkRocket(net.minecraft.world.item.ItemStack itemStack) {
+    private static boolean containsFireworkRocket(ItemStack itemStack) {
         // Проверяем, есть ли в NBT арбалета фейерверк
         if (itemStack.getTag() != null && itemStack.getTag().contains("ChargedProjectiles")) {
-            net.minecraft.nbt.ListTag projectiles = itemStack.getTag().getList("ChargedProjectiles", 10); // 10 - тип TAG_Compound
+            ListTag projectiles = itemStack.getTag().getList("ChargedProjectiles", 10); // 10 - тип TAG_Compound
             if (!projectiles.isEmpty()) {
                 // Берем первый снаряд и проверяем, является ли он фейерверком
-                net.minecraft.nbt.CompoundTag projectile = projectiles.getCompound(0);
+                CompoundTag projectile = projectiles.getCompound(0);
                 // Проверяем ID предмета. "minecraft:firework_rocket" - это стандартный ID фейерверка.
                 return projectile.contains("id") && projectile.getString("id").equals("minecraft:firework_rocket");
             }

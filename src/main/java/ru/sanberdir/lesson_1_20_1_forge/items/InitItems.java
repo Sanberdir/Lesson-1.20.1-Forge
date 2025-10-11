@@ -21,6 +21,7 @@ public class InitItems {
 
     public static final RegistryObject<Item> MOD_BOW = ITEMS.register("mod_bow",
             () -> new BowItem(new Item.Properties().stacksTo(1).durability(5000)));
+
     public static final RegistryObject<Item> MOD_CROSSBOW = ITEMS.register("mod_crossbow",
             () -> new CrossbowItem(new Item.Properties().stacksTo(1).durability(5000)));
 
