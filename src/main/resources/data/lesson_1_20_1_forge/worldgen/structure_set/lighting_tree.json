@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "lesson_1_20_1_forge:lighting_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1642136474,
+    "spacing": 20,
+    "separation": 6,
+    "type": "minecraft:random_spread"
+  }
+}
