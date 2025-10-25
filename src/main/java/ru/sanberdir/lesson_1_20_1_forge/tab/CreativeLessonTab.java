@@ -36,6 +36,7 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitBlocks.USUAL_FENCE_GATE.get());
                         output.accept(InitBlocks.USUAL_PRESSURE_PLATE.get());
                         output.accept(InitBlocks.USUAL_BUTTON.get());
+                        output.accept(InitBlocks.LEMONADE_CAKE.get());
                         //Items
                         output.accept(InitItems.MOD_BOW.get());
                         output.accept(InitItems.MOD_CROSSBOW.get());

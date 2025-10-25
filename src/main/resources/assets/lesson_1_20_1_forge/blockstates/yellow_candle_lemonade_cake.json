@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "lesson_1_20_1_forge:block/yellow_candle_lemonade_cake"
+    },
+    "lit=true": {
+      "model": "lesson_1_20_1_forge:block/yellow_candle_lemonade_cake_lit"
+    }
+  }
+}

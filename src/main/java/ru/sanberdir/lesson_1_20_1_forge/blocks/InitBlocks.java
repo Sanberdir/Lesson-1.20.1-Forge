@@ -32,6 +32,48 @@ public class InitBlocks {
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
+    public static final RegistryObject<Block> LEMONADE_CAKE = registerBlock("lemonade_cake",
+            () -> new LemonadeCakeBlock(BlockBehaviour.Properties.of()
+            .forceSolidOn().strength(0.5F).sound(SoundType.WOOL).pushReaction(PushReaction.DESTROY)));
+
+
+    public static final RegistryObject<Block> CANDLE_LEMONADE_CAKE = registerBlock("candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> WHITE_CANDLE_LEMONADE_CAKE = registerBlock("white_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.WHITE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> BLACK_CANDLE_LEMONADE_CAKE = registerBlock("black_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.BLACK_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> YELLOW_CANDLE_LEMONADE_CAKE = registerBlock("yellow_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.YELLOW_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> RED_CANDLE_LEMONADE_CAKE = registerBlock("red_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.RED_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> ORANGE_CANDLE_LEMONADE_CAKE = registerBlock("orange_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.ORANGE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> PINK_CANDLE_LEMONADE_CAKE = registerBlock("pink_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.PINK_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> PURPLE_CANDLE_LEMONADE_CAKE = registerBlock("purple_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.PURPLE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> MAGENTA_CANDLE_LEMONADE_CAKE = registerBlock("magenta_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.MAGENTA_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> GRAY_CANDLE_LEMONADE_CAKE = registerBlock("gray_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.GRAY_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> CYAN_CANDLE_LEMONADE_CAKE = registerBlock("cyan_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.CYAN_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> BLUE_CANDLE_LEMONADE_CAKE = registerBlock("blue_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.BLUE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> BROWN_CANDLE_LEMONADE_CAKE = registerBlock("brown_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.BROWN_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> GREEN_CANDLE_LEMONADE_CAKE = registerBlock("green_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.GREEN_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> LIME_CANDLE_LEMONADE_CAKE = registerBlock("lime_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.LIME_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> LIGHT_BLUE_CANDLE_LEMONADE_CAKE = registerBlock("light_blue_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.LIGHT_BLUE_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+    public static final RegistryObject<Block> LIGHT_GRAY_CANDLE_LEMONADE_CAKE = registerBlock("light_gray_candle_lemonade_cake",
+            () -> new CandleLemonadeCake(Blocks.LIGHT_GRAY_CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));
+
+
+
     public static final RegistryObject<Block> USUAL_STAIRS = registerBlock("usual_stairs",
             () -> new StairBlock(USUAL_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)

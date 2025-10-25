@@ -1,0 +1,10 @@
+{
+  "parent": "lesson_1_20_1_forge:block/template_lemonade_cake_with_candle",
+  "textures": {
+    "bottom": "lesson_1_20_1_forge:block/lemonade_cake_bottom",
+    "candle": "minecraft:block/pink_candle_lit",
+    "particle": "lesson_1_20_1_forge:block/lemonade_cake_side",
+    "side": "lesson_1_20_1_forge:block/lemonade_cake_side",
+    "top": "lesson_1_20_1_forge:block/lemonade_cake_top"
+  }
+}

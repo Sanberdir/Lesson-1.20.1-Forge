@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake"
+    },
+    "stage=1": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice1"
+    },
+    "stage=2": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice2"
+    },
+    "stage=3": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice3"
+    },
+    "stage=4": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice4"
+    },
+    "stage=5": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice5"
+    },
+    "stage=6": {
+      "model": "lesson_1_20_1_forge:block/lemonade_cake_slice6"
+    }
+  }
+}
