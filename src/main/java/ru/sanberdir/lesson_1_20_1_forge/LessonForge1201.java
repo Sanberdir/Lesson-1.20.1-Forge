@@ -30,7 +30,10 @@ import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModUsualBoatRenderer
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModModelLayersItem;
 import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
 import ru.sanberdir.lesson_1_20_1_forge.villagers.InitVillagers;
+import ru.sanberdir.lesson_1_20_1_forge.world.biome.ModTerrablender;
+import ru.sanberdir.lesson_1_20_1_forge.world.biome.surface.ModSurfaceRules;
 import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LessonForge1201.MODID)
@@ -48,7 +51,7 @@ public class LessonForge1201 {
         ModEntitiesItem.ENTITIES.register(modEventBus);
         // Регистрация класса блоков
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
-
+        ModTerrablender.registerBiomes();
         InitBlocks.BLOCKS.register(modEventBus);
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
@@ -67,6 +70,7 @@ public class LessonForge1201 {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModFlammableBlocks::registerFlammableBlocks);
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID, ModSurfaceRules.makeRules());
     }
 
     // Add the example block item to the building blocks tab

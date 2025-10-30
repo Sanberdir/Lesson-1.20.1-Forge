@@ -1,7 +1,8 @@
-// 1.20.1	2025-09-26T23:29:04.7978208	Registries
+// 1.20.1	2025-10-30T20:34:55.7030336	Registries
 28f55749f8e0b5c5da3bcf4f7306e4433812789b data/lesson_1_20_1_forge/forge/biome_modifier/add_emerald_ore.json
 32478d6fdc671277c9fadb95e620e723ead2c4cf data/lesson_1_20_1_forge/forge/biome_modifier/add_end_emerald_ore.json
 dadf2d30fd5d8213faf8bc6e16448eeb4e010a9f data/lesson_1_20_1_forge/forge/biome_modifier/add_nether_emerald_ore.json
+32abb8e83e44a491370f5f12ee4e951eeaee315b data/lesson_1_20_1_forge/worldgen/biome/black_stone.json
 a568d6578bb3c81ca66061da2e96b24210caac0b data/lesson_1_20_1_forge/worldgen/configured_feature/emerald_ore.json
 50c9a8c0649d8259785da5487771d66209b56097 data/lesson_1_20_1_forge/worldgen/configured_feature/end_emerald_ore.json
 08de7285700007674dcfbaf41c4f6f0ea23d2fb2 data/lesson_1_20_1_forge/worldgen/configured_feature/nether_emerald_ore.json

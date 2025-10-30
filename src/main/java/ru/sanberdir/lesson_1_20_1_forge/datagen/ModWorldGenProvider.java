@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
+import ru.sanberdir.lesson_1_20_1_forge.world.biome.ModBiomes;
 import ru.sanberdir.lesson_1_20_1_forge.world.features.ModBiomeModifiers;
 import ru.sanberdir.lesson_1_20_1_forge.world.features.ModConfiguredFeatures;
 import ru.sanberdir.lesson_1_20_1_forge.world.features.ModPlacedFeatures;
@@ -33,7 +34,9 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             // Регистрация модификаторов биомов (где генерировать)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
             // Регистрация размещенных features (как генерировать)
-            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
+            .add(Registries.BIOME, ModBiomes::boostrap);;
+
 
     /**
      * Конструктор провайдера данных генерации мира
