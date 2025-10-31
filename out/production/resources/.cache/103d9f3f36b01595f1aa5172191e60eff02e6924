@@ -1,4 +1,6 @@
-// 1.20.1	2025-10-30T20:34:55.7030336	Registries
+// 1.20.1	2025-10-30T23:05:18.3721624	Registries
+41ec65b9106c480222b95fc9b2e2d025c2b97c58 data/lesson_1_20_1_forge/dimension/customdim.json
+e241e971aacde6f4d0236c622c99d6c9caeb981e data/lesson_1_20_1_forge/dimension_type/customdim_type.json
 28f55749f8e0b5c5da3bcf4f7306e4433812789b data/lesson_1_20_1_forge/forge/biome_modifier/add_emerald_ore.json
 32478d6fdc671277c9fadb95e620e723ead2c4cf data/lesson_1_20_1_forge/forge/biome_modifier/add_end_emerald_ore.json
 dadf2d30fd5d8213faf8bc6e16448eeb4e010a9f data/lesson_1_20_1_forge/forge/biome_modifier/add_nether_emerald_ore.json

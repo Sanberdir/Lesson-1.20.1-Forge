@@ -26,7 +26,7 @@ public class InitBlocks {
 
 
     public static final RegistryObject<Block> DICE_BLOCK = registerBlock("dice_block",
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.AMETHYST).strength(1.5F,10f)));
+            () -> new ModPortalBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).sound(SoundType.AMETHYST).strength(1.5F,10f)));
 
     public static final RegistryObject<Block> USUAL_PLANKS = registerBlock("usual_planks",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
