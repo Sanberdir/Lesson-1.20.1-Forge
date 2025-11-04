@@ -23,6 +23,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.catch_fire.ModFlammableBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
+import ru.sanberdir.lesson_1_20_1_forge.entity.ModEntities;
+import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
 import ru.sanberdir.lesson_1_20_1_forge.items.ModItemProperties;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
@@ -45,7 +47,7 @@ public class LessonForge1201 {
 
     public LessonForge1201() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        ModEntities.ENTITY_TYPES.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         ModEntitiesItem.ENTITIES.register(modEventBus);
@@ -53,6 +55,7 @@ public class LessonForge1201 {
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTerrablender.registerBiomes();
         InitBlocks.BLOCKS.register(modEventBus);
+
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
         // Регистрация класса креатив табов
@@ -96,6 +99,7 @@ public class LessonForge1201 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             ModItemProperties.addCustomItemProperties();
             Sheets.addWoodType(ModWoodTypes.USUAL);
             EntityRenderers.register(ModEntitiesItem.MOD_BOAT_USUAL.get(), pContext -> new ModUsualBoatRenderer(pContext, false));

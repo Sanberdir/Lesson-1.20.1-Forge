@@ -8,10 +8,16 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
+import ru.sanberdir.lesson_1_20_1_forge.entity.client.ModModelLayers;
+import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoModel;
 
 @Mod.EventBusSubscriber(modid = LessonForge1201.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
 
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
+    }
 
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

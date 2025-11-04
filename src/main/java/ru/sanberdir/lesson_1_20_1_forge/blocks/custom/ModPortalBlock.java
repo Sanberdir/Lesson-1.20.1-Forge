@@ -23,14 +23,14 @@ public class ModPortalBlock extends Block {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (pPlayer.canChangeDimensions()) {
-            handleKaupenPortal(pPlayer, pPos);
+            handleCustomPortal(pPlayer, pPos);
             return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.CONSUME;
         }
     }
 
-    private void handleKaupenPortal(Entity player, BlockPos pPos) {
+    private void handleCustomPortal(Entity player, BlockPos pPos) {
         if (player.level() instanceof ServerLevel serverlevel) {
             MinecraftServer minecraftserver = serverlevel.getServer();
             ResourceKey<Level> resourcekey = player.level().dimension() == ModDimensions.CUSTOMDIM_LEVEL_KEY ?
