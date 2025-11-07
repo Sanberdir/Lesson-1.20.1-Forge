@@ -258,6 +258,7 @@ public class ModAnimationDefinitions {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(1f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
+
     public static final AnimationDefinition RHINO_ATTACK = AnimationDefinition.Builder.withLength(4f).looping()
             .addAnimation("skull",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
