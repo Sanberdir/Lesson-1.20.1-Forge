@@ -11,6 +11,12 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, LessonForge1201.MODID);
 
+    public static final RegistryObject<BlockEntityType<GemPolishingStationBlockEntity>> GEM_POLISHING_BE =
+            BLOCK_ENTITIES.register("gem_polishing_be", () ->
+                    BlockEntityType.Builder.of(GemPolishingStationBlockEntity::new,
+                            InitBlocks.GEM_POLISHING_STATION.get()).build(null));
+
+
     public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> USUAL_SIGN =
             BLOCK_ENTITIES.register("usual_sign", () ->
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,

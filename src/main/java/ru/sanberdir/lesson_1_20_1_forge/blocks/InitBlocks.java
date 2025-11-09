@@ -32,10 +32,19 @@ public class InitBlocks {
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
+
+
+
+
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+
+
     public static final RegistryObject<Block> LEMONADE_CAKE = registerBlock("lemonade_cake",
             () -> new LemonadeCakeBlock(BlockBehaviour.Properties.of()
             .forceSolidOn().strength(0.5F).sound(SoundType.WOOL).pushReaction(PushReaction.DESTROY)));
-
 
     public static final RegistryObject<Block> CANDLE_LEMONADE_CAKE = registerBlock("candle_lemonade_cake",
             () -> new CandleLemonadeCake(Blocks.CANDLE,BlockBehaviour.Properties.copy(Blocks.CANDLE_CAKE)));

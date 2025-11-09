@@ -1,5 +1,6 @@
 package ru.sanberdir.lesson_1_20_1_forge;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
@@ -25,6 +26,8 @@ import ru.sanberdir.lesson_1_20_1_forge.blocks.catch_fire.ModFlammableBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
 import ru.sanberdir.lesson_1_20_1_forge.entity.ModEntities;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoRenderer;
+import ru.sanberdir.lesson_1_20_1_forge.gui.GemPolishingStationScreen;
+import ru.sanberdir.lesson_1_20_1_forge.gui.ModMenuTypes;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
 import ru.sanberdir.lesson_1_20_1_forge.items.ModItemProperties;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
@@ -51,6 +54,7 @@ public class LessonForge1201 {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         ModEntitiesItem.ENTITIES.register(modEventBus);
+        ModMenuTypes.MENUS.register(modEventBus);
         // Регистрация класса блоков
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTerrablender.registerBiomes();
@@ -99,6 +103,8 @@ public class LessonForge1201 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
+
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             ModItemProperties.addCustomItemProperties();
             Sheets.addWoodType(ModWoodTypes.USUAL);

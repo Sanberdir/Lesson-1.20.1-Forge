@@ -25,6 +25,7 @@ public class CreativeLessonTab extends CreativeModeTab {
                     .displayItems((parameters, output) -> {
                         //Blocks
                         output.accept(InitBlocks.DICE_BLOCK.get());
+                        output.accept(InitBlocks.GEM_POLISHING_STATION.get());
                         output.accept(InitBlocks.USUAL_PLANKS.get());
                         output.accept(InitBlocks.USUAL_LOG.get());
                         output.accept(InitBlocks.USUAL_WOOD.get());
