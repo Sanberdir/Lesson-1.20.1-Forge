@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
+import ru.sanberdir.lesson_1_20_1_forge.blocks.renderer.GemPolishingBlockEntityRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.ModModelLayers;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoModel;
 
@@ -23,5 +24,7 @@ public class ModEventBusClientEvents {
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.USUAL_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.USUAL_HANGING_SIGN.get(), HangingSignRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.GEM_POLISHING_BE.get(), GemPolishingBlockEntityRenderer::new);
+
     }
 }

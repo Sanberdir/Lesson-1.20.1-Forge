@@ -79,6 +79,16 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
             }
         };
     }
+    /**
+     * Рендер предмета голограммы
+     */
+    public ItemStack getRenderStack() {
+        if (itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty()) {
+            return itemHandler.getStackInSlot(INPUT_SLOT);
+        } else {
+            return itemHandler.getStackInSlot(OUTPUT_SLOT);
+        }
+    }
 
     /**
      * Предоставление capability для взаимодействия с другими модами/системами
