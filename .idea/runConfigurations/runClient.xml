@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="runClient" type="Application" factoryName="Application" singleton="false">
-    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH" value="azul-17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <envs>
       <env name="MOD_CLASSES" value="lesson_1_20_1_forge%%$PROJECT_DIR$/../lesson_1.20.1Forge\out\production\resources;lesson_1_20_1_forge%%$PROJECT_DIR$/../lesson_1.20.1Forge\out\production\classes" />
