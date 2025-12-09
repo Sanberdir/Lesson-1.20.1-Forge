@@ -1,0 +1,10 @@
+{
+  "type": "lesson_1_20_1_forge:add_sus_sand_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:archaeology/desert_pyramid"
+    }
+  ],
+  "item": "lesson_1_20_1_forge:tiger_stone"
+}

@@ -33,6 +33,7 @@ import ru.sanberdir.lesson_1_20_1_forge.items.ModItemProperties;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModEntitiesItem;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModUsualBoatRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.client.ModModelLayersItem;
+import ru.sanberdir.lesson_1_20_1_forge.loot.ModLootModifiers;
 import ru.sanberdir.lesson_1_20_1_forge.recipes.ModRecipes;
 import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
 import ru.sanberdir.lesson_1_20_1_forge.villagers.InitVillagers;
@@ -57,6 +58,7 @@ public class LessonForge1201 {
         ModEntitiesItem.ENTITIES.register(modEventBus);
         ModMenuTypes.MENUS.register(modEventBus);
         ModRecipes.SERIALIZERS.register(modEventBus);
+        ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         // Регистрация класса блоков
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTerrablender.registerBiomes();
