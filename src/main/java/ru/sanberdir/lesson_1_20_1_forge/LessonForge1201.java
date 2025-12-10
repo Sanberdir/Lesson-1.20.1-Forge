@@ -39,6 +39,7 @@ import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
 import ru.sanberdir.lesson_1_20_1_forge.villagers.InitVillagers;
 import ru.sanberdir.lesson_1_20_1_forge.world.biome.ModTerrablender;
 import ru.sanberdir.lesson_1_20_1_forge.world.biome.surface.ModSurfaceRules;
+import ru.sanberdir.lesson_1_20_1_forge.world.features.ModTrunkPlacerTypes;
 import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 import terrablender.api.SurfaceRuleManager;
 
@@ -63,7 +64,7 @@ public class LessonForge1201 {
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTerrablender.registerBiomes();
         InitBlocks.BLOCKS.register(modEventBus);
-
+        ModTrunkPlacerTypes.TRUNK_PLACER.register(modEventBus);
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
         // Регистрация класса креатив табов

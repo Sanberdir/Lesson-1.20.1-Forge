@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
+import ru.sanberdir.lesson_1_20_1_forge.world.tree.custom.PineTrunkPlacer;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -40,7 +42,14 @@ public class ModConfiguredFeatures {
      */
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         // Регистрация fancy oak дерева с пользовательскими блоками
-        register(context, USUAL_TREE, Feature.TREE, createFancyOak().build());
+        register(context, USUAL_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(InitBlocks.USUAL_LOG.get()),
+                new PineTrunkPlacer(5, 4, 3),
+
+                BlockStateProvider.simple(InitBlocks.USUAL_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
         // Определение RuleTest'ов для заменяемых блоков в разных измерениях
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES); // Каменные блоки в Оверворлде
@@ -61,19 +70,8 @@ public class ModConfiguredFeatures {
                 Blocks.EMERALD_ORE.defaultBlockState(), 9));
     }
 
-    /**
-     * Создание конфигурации для fancy oak дерева с пользовательскими блоками
-     * @return TreeConfiguration.Builder для fancy дерева
-     */
-    private static TreeConfiguration.TreeConfigurationBuilder createFancyOak() {
-        return new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(InitBlocks.USUAL_LOG.get()),     // Ствол из пользовательского блока
-                new FancyTrunkPlacer(3, 11, 0),                           // Генератор ствола: базовая высота 3, случайная 11
-                BlockStateProvider.simple(InitBlocks.USUAL_LEAVES.get()),  // Листья из пользовательского блока
-                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4), // Генератор листвы: радиус 2-4, высота 4
-                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))      // Размер feature: два слоя, минимальный зазор 4
-        ).ignoreVines(); // Игнорировать лианы при генерации
-    }
+
+
 
     /**
      * Вспомогательный метод для создания ключей ресурсов сконфигурированных features
