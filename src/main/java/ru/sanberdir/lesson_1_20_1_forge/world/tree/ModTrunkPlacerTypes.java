@@ -1,4 +1,4 @@
-package ru.sanberdir.lesson_1_20_1_forge.world.features;
+package ru.sanberdir.lesson_1_20_1_forge.world.tree;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;

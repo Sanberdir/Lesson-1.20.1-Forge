@@ -22,6 +22,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
+import ru.sanberdir.lesson_1_20_1_forge.world.tree.custom.PineFoliagePlacer;
 import ru.sanberdir.lesson_1_20_1_forge.world.tree.custom.PineTrunkPlacer;
 
 import java.util.List;
@@ -47,9 +48,10 @@ public class ModConfiguredFeatures {
                 new PineTrunkPlacer(5, 4, 3),
 
                 BlockStateProvider.simple(InitBlocks.USUAL_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+                new PineFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
+
 
         // Определение RuleTest'ов для заменяемых блоков в разных измерениях
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES); // Каменные блоки в Оверворлде

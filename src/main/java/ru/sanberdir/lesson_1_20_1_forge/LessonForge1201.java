@@ -4,8 +4,6 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
-import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,7 +37,8 @@ import ru.sanberdir.lesson_1_20_1_forge.tab.CreativeLessonTab;
 import ru.sanberdir.lesson_1_20_1_forge.villagers.InitVillagers;
 import ru.sanberdir.lesson_1_20_1_forge.world.biome.ModTerrablender;
 import ru.sanberdir.lesson_1_20_1_forge.world.biome.surface.ModSurfaceRules;
-import ru.sanberdir.lesson_1_20_1_forge.world.features.ModTrunkPlacerTypes;
+import ru.sanberdir.lesson_1_20_1_forge.world.tree.ModFoliagePlacers;
+import ru.sanberdir.lesson_1_20_1_forge.world.tree.ModTrunkPlacerTypes;
 import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 import terrablender.api.SurfaceRuleManager;
 
@@ -65,6 +64,7 @@ public class LessonForge1201 {
         ModTerrablender.registerBiomes();
         InitBlocks.BLOCKS.register(modEventBus);
         ModTrunkPlacerTypes.TRUNK_PLACER.register(modEventBus);
+        ModFoliagePlacers.FOLIAGE_PLACERS.register(modEventBus);
         // Регистрация класса предметов
         InitItems.ITEMS.register(modEventBus);
         // Регистрация класса креатив табов
