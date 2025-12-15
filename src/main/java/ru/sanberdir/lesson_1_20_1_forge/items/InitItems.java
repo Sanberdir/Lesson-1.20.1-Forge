@@ -19,6 +19,9 @@ public class InitItems {
     public static final RegistryObject<Item> TIGER_STONE = ITEMS.register("tiger_stone",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> MOD_BOW = ITEMS.register("mod_bow",
             () -> new BowItem(new Item.Properties().stacksTo(1).durability(5000)));
 

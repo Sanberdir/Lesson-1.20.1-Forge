@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "lesson_1_20_1_forge:item/sapphire_staff"
+  }
+}
