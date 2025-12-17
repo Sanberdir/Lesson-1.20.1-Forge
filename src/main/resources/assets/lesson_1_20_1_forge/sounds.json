@@ -1,0 +1,32 @@
+{
+  "sound_block_break": {
+    "subtitle": "sounds.lesson_1_20_1_forge.sound_block_break",
+    "sounds": [
+      "lesson_1_20_1_forge:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.lesson_1_20_1_forge.sound_block_step",
+    "sounds": [
+      "lesson_1_20_1_forge:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.lesson_1_20_1_forge.sound_block_place",
+    "sounds": [
+      "lesson_1_20_1_forge:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.lesson_1_20_1_forge.sound_block_hit",
+    "sounds": [
+      "lesson_1_20_1_forge:sound_block_hit"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.lesson_1_20_1_forge.sound_block_fall",
+    "sounds": [
+      "lesson_1_20_1_forge:sound_block_fall"
+    ]
+  }
+}

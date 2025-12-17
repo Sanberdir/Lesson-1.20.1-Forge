@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.custom.*;
 import ru.sanberdir.lesson_1_20_1_forge.items.InitItems;
+import ru.sanberdir.lesson_1_20_1_forge.sound.ModSounds;
 import ru.sanberdir.lesson_1_20_1_forge.world.tree.UsualTree;
 import ru.sanberdir.lesson_1_20_1_forge.world.wood.ModWoodTypes;
 
@@ -131,7 +132,8 @@ public class InitBlocks {
 
     public static final RegistryObject<Block> USUAL_LOG = registerBlock("usual_log",
             () -> new StrippedWoodLogs(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
+                    .strength(2.0F).sound(ModSounds.SOUND_BLOCK_SOUNDS).ignitedByLava()));
+
     public static final RegistryObject<Block> USUAL_WOOD = registerBlock("usual_wood",
             () -> new StrippedWoodLogs(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS)
                     .strength(2.0F).sound(SoundType.WOOD).ignitedByLava()));
