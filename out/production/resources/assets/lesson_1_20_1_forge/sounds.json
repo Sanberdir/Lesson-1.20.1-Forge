@@ -28,5 +28,13 @@
     "sounds": [
       "lesson_1_20_1_forge:sound_block_fall"
     ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "lesson_1_20_1_forge:bar_brawl",
+        "stream": true
+      }
+    ]
   }
 }

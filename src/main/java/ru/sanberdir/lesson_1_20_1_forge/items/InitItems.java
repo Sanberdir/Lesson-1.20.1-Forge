@@ -11,6 +11,7 @@ import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.items.custom.ModBoatItem;
 import ru.sanberdir.lesson_1_20_1_forge.items.entity.ModBoatEntityUsual;
+import ru.sanberdir.lesson_1_20_1_forge.sound.ModSounds;
 
 public class InitItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -21,6 +22,9 @@ public class InitItems {
 
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
             () -> new Item(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new RecordItem(6, ModSounds.BAR_BRAWL, new Item.Properties().stacksTo(1), 2440));
 
     public static final RegistryObject<Item> MOD_BOW = ITEMS.register("mod_bow",
             () -> new BowItem(new Item.Properties().stacksTo(1).durability(5000)));
