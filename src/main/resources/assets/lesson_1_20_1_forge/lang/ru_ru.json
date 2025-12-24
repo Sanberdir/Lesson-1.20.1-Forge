@@ -23,6 +23,12 @@
 
   "creative_tab.lesson_1_20_1_forge": "Урок 1.20.1",
 
+  "item.lesson_1_20_1_forge.sapphire_sword": "Сапфировый меч",
+  "item.lesson_1_20_1_forge.sapphire_pickaxe": "Сапфировая кирка",
+  "item.lesson_1_20_1_forge.sapphire_axe": "Сапфировый топор",
+  "item.lesson_1_20_1_forge.sapphire_shovel": "Сапфировая лопата",
+  "item.lesson_1_20_1_forge.sapphire_hoe": "Сапфировая мотыга",
+  
   "entity.minecraft.villager.lesson_1_20_1_forge.fabricator_master": "Фабрикант",
   "item.lesson_1_20_1_forge.bar_brawl_music_disc": "Пластинка - Bar Brawl",
   "item.lesson_1_20_1_forge.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
