@@ -28,6 +28,11 @@
   "item.lesson_1_20_1_forge.sapphire_axe": "Сапфировый топор",
   "item.lesson_1_20_1_forge.sapphire_shovel": "Сапфировая лопата",
   "item.lesson_1_20_1_forge.sapphire_hoe": "Сапфировая мотыга",
+
+  "item.lesson_1_20_1_forge.sapphire_chestplate": "Сапфировый нагрудник",
+  "item.lesson_1_20_1_forge.sapphire_boots": "Сапфировые ботинки",
+  "item.lesson_1_20_1_forge.sapphire_leggings": "Сапфировые поножи",
+  "item.lesson_1_20_1_forge.sapphire_helmet": "Сапфировый шлем",
   
   "entity.minecraft.villager.lesson_1_20_1_forge.fabricator_master": "Фабрикант",
   "item.lesson_1_20_1_forge.bar_brawl_music_disc": "Пластинка - Bar Brawl",

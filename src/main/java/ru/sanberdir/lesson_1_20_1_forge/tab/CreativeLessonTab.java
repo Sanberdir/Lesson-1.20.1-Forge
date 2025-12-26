@@ -45,6 +45,11 @@ public class CreativeLessonTab extends CreativeModeTab {
                         output.accept(InitItems.SAPPHIRE_SHOVEL.get());
                         output.accept(InitItems.SAPPHIRE_SWORD.get());
 
+                        output.accept(InitItems.SAPPHIRE_HELMET.get());
+                        output.accept(InitItems.SAPPHIRE_CHESTPLATE.get());
+                        output.accept(InitItems.SAPPHIRE_LEGGINGS.get());
+                        output.accept(InitItems.SAPPHIRE_BOOTS.get());
+
                         output.accept(InitItems.BAR_BRAWL_MUSIC_DISC.get());
                         output.accept(InitItems.SAPPHIRE_STAFF.get());
                         output.accept(InitItems.MOD_BOW.get());
