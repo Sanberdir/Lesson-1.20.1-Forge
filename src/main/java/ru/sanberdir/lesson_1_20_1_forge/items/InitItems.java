@@ -96,10 +96,8 @@ public class InitItems {
             () -> new HangingSignItem(InitBlocks.USUAL_HANGING_SIGN.get(), InitBlocks.USUAL_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> CALCINE = ITEMS.register("calcine",
-            () -> new FlameItem(new Item.Properties().food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F)
-                    // meet - можно кормить собак,   alwaysEat -  можно есть всегда, fast - есться быстро
-                    .meat().alwaysEat().fast()
-                    .effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 120, 0), 1F)
-                    .effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 2), 0.1F)
-                    .build())));
+            () -> new FlameItem(new Item.Properties(), 600));
+
+
+
 }

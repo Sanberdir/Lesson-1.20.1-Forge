@@ -23,6 +23,7 @@ import ru.sanberdir.lesson_1_20_1_forge.blocks.InitBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.catch_fire.ModFlammableBlocks;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
 import ru.sanberdir.lesson_1_20_1_forge.entity.ModEntities;
+import ru.sanberdir.lesson_1_20_1_forge.entity.client.ChomperRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoRenderer;
 import ru.sanberdir.lesson_1_20_1_forge.gui.GemPolishingStationScreen;
 import ru.sanberdir.lesson_1_20_1_forge.gui.ModMenuTypes;
@@ -110,6 +111,9 @@ public class LessonForge1201 {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.CHOMPER.get(), ChomperRenderer::new);
+
+
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
 
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);

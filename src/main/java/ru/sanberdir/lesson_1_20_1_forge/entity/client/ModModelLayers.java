@@ -7,5 +7,4 @@ import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 public class ModModelLayers {
     public static final ModelLayerLocation RHINO_LAYER = new ModelLayerLocation(
             new ResourceLocation(LessonForge1201.MODID, "rhino_layer"), "main");
-
 }

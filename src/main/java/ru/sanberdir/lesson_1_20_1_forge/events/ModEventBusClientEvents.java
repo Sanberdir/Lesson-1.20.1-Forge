@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import ru.sanberdir.lesson_1_20_1_forge.LessonForge1201;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.entity.ModBlockEntities;
 import ru.sanberdir.lesson_1_20_1_forge.blocks.renderer.GemPolishingBlockEntityRenderer;
+import ru.sanberdir.lesson_1_20_1_forge.entity.client.ChomperModel;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.ModModelLayers;
 import ru.sanberdir.lesson_1_20_1_forge.entity.client.RhinoModel;
 
